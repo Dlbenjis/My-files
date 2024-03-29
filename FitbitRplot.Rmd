@@ -1,0 +1,37 @@
+---
+title: "Fitbit_Step_Calories_plot"
+author: "Benjamin"
+date: "2024-03-29"
+output: html_document
+---
+## Setting up my Environment
+  Note: loading 'tidyverse' and 'ggplot2' packages
+```{r setup, include=FALSE}
+library('tidyverse')
+library('ggplot2')
+
+```
+
+## Fitbit Steps Calories Plot
+
+This is a plot showing the relationship between TotalSteps and Calories of group of persons using Fitbit tracking devices.
+For more info;click here [link](https://www.kaggle.com/datasets/arashnic/fitbit).
+
+```{r ggplot for cleanned_daily_Activity, include=FALSE}
+library(readr)
+Fitbit<- read_csv("New folder/Fitbit.csv")
+```
+
+
+
+
+```{r ggplot Fitbit data visualization, echo=FALSE, message=FALSE}
+ ggplot(data=Fitbit)+
+  geom_point(mapping=aes(x=Calories,y=TotalSteps,color=Calories))+
+  geom_smooth(mapping=aes(x=Calories,y=TotalSteps))+
+  labs(title="Fitbit Tracker's Benefit",subtitle="Effect Of Steps Changes On Calories",
+       caption="Authored By Mobius")+
+  annotate("text", x=2000,y=27000,
+           label="The Higher The Steps, The Lower The Calories",
+           fontface="bold",size=4.5)
+```
