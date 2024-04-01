@@ -1,0 +1,47 @@
+---
+title: "Avocado"
+author: "Benjamin"
+date: "2024-04-01"
+output: html_document
+---
+
+## Setting up my environment
+```{r setup, include=FALSE}
+ library("tidyverse")
+```
+
+## Avocado Consumption
+
+This is avocado document. showing the differences in the consumption of the two types: **conventional** and **organic** avocado.
+<http://rmarkdown.rstudio.com>.
+
+```{r sum of Total Volume}
+geeks <- c(15087220911,436181682.1)
+labels <- c("Conventional","Organic")
+piepercent <- round(100*geeks/sum(geeks), 1)
+pie(geeks, labels = piepercent, main = "SUM of Total Volume", col = rainbow(length(geeks)))
+legend("topleft", c("Conventional","Organic"),cex = 0.8, fill = rainbow(length(geeks)))
+```
+
+```{r SUM of Average Price, echo=FALSE}
+
+geeks<- c(10568.27,15089.43)
+labels<- c("Conventional,Organic")
+peipercent <- round(100*geeks/sum(geeks), 1)
+pie(geeks,labels = piepercent,main="SUMof AveragePrice", col= rainbow(length(geeks)))
+legend("topleft", c("Conventional" , "Organic"),cex = 0.8, fill = rainbow(length(geeks)))
+```
+
+
+
+Summary:
+
+   From the above charts, a greater part of *conventional* avocado was sold in comparison to the *organic* type, while the Organic has a higher Price which may be the reason for the fewer quantity sold.
+   
+
+
+
+
+Recommendation:
+
+  Since the consumer prefer to buy the conventional type, i advice that more of it should be stocked and very few of the *organic* type should be stocked.
