@@ -12,7 +12,8 @@ output: html_document
 
 ## Avocado Consumption
 
-This is avocado document. showing the differences in the consumption of the two types: **conventional** and **organic** avocado.
+This is avocado document. showing the differences in the consumption of the two types: **conventional** and **organic** avocado. For more info, click this [link](https://www.kaggle.com/datasets/neuromusic/avocado-prices)
+
 
 ```{r sum of Total Volume}
 geeks <- c(15087220911,436181682.1)
